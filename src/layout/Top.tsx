@@ -5,9 +5,9 @@ import styled from "styled-components";
 import ButtonBuy from "../ui/button/ButtonBuy";
 import ButtonSell from "../ui/button/ButtonSell";
 import Paragraph from "../ui/Paragraph";
+import UseCryptoHook from "../utils/hooks/UseCrypto";
 
 import { currency, Extension } from "../utils/currency";
-import { UseCryptoHook } from "../utils/hooks/UseCrypto";
 
 const Top: React.FC = () => {
   const { currentmarkedPrice, limitPrice, cryptoVolume } = UseCryptoHook();

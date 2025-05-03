@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import UseButtonsHook from "../../utils/hooks/UseButtons";
 
 import { ButtonsType } from "../../utils/type";
 import { MouseEventHandler, useEffect } from "react";
-import { UseButtonsHook } from "../../utils/hooks/UseButtons";
 
 interface IProps {
   title: string;

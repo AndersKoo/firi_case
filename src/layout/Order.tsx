@@ -5,10 +5,10 @@ import Spacer from "../ui/Spacer";
 import Paragraph from "../ui/Paragraph";
 import Title from "../ui/Title";
 import Line from "../ui/Line";
+import UseModalHook from "../utils/hooks/UseModal";
+import UseButtonsHook from "../utils/hooks/UseButtons";
 
 import { currency, Extension } from "../utils/currency";
-import { UseModalHook } from "../utils/hooks/UseModal";
-import { UseButtonsHook } from "../utils/hooks/UseButtons";
 import { OrderObject } from "../utils/type";
 
 interface IProps {
@@ -30,7 +30,8 @@ const Order: React.FC<IProps> = ({ data }) => {
         disabled={false}
         onClick={() => {
           openModal();
-        }}>
+        }}
+      >
         <span>{data?.titleMain}</span>
       </button>
 
@@ -90,7 +91,8 @@ const Order: React.FC<IProps> = ({ data }) => {
             closeModal();
             resetBuyClick();
             resetSellClick();
-          }}>
+          }}
+        >
           <span>{data?.titleSecondary}</span>
         </button>
       </Modal>
