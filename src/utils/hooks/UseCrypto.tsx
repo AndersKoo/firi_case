@@ -6,4 +6,4 @@ const UseCryptoHook = () => {
   return React.useContext(CryptoContext);
 };
 
-export { UseCryptoHook };
+export default UseCryptoHook;

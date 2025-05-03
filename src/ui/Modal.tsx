@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-import { UseModalHook } from "../utils/hooks/UseModal";
+import UseModalHook from "../utils/hooks/UseModal";
 
 interface ModalProps {
   children: React.ReactNode;
@@ -10,7 +9,6 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({ children }) => {
   const { isOpen } = UseModalHook();
 
-  // isOpen trigges fra knappene i Main.tsx og Order.tsx.
   if (!isOpen) return null;
 
   return (

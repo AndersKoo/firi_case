@@ -6,4 +6,4 @@ const UseModalHook = () => {
   return React.useContext(ModalContext);
 };
 
-export { UseModalHook };
+export default UseModalHook;

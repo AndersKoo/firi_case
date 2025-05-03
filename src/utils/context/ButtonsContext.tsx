@@ -44,7 +44,8 @@ export const ButtonsProvider: React.FC<IProps> = ({ children }) => {
         resetBuyClick,
         resetSellClick,
         children,
-      }}>
+      }}
+    >
       {children}
     </ButtonsContext.Provider>
   );

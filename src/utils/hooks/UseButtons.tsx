@@ -6,4 +6,4 @@ const UseButtonsHook = () => {
   return React.useContext(ButtonsContext);
 };
 
-export { UseButtonsHook };
+export default UseButtonsHook;
