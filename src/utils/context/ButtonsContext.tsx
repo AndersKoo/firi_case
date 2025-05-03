@@ -10,7 +10,6 @@ interface IButtons {
   setSellClicked: React.Dispatch<React.SetStateAction<boolean>>;
   resetBuyClick: () => void;
   resetSellClick: () => void;
-  children: React.ReactNode;
 }
 
 export const ButtonsContext = React.createContext<IButtons>({
@@ -20,7 +19,6 @@ export const ButtonsContext = React.createContext<IButtons>({
   setSellClicked: () => {},
   resetBuyClick: () => {},
   resetSellClick: () => {},
-  children: undefined,
 });
 
 export const ButtonsProvider: React.FC<IProps> = ({ children }) => {
@@ -43,7 +41,6 @@ export const ButtonsProvider: React.FC<IProps> = ({ children }) => {
         setSellClicked,
         resetBuyClick,
         resetSellClick,
-        children,
       }}>
       {children}
     </ButtonsContext.Provider>
