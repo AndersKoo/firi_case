@@ -43,12 +43,12 @@ const Order: React.FC<IProps> = ({ data }) => {
 
             <Spacer top="30px" />
             <Paragraph>
-              Limitpris: {numeral(data?.limitPrice).format("0,0.00")}{" "}
+              Limit-pris: {numeral(data?.limitPrice).format("0,0.00")}{" "}
               {currency(Extension.NOK)}
             </Paragraph>
             <Spacer bottom="5px" />
             <Paragraph>
-              Volume: {data?.cryptoVolume} {currency(Extension.BTC)}
+              Volum: {data?.cryptoVolume} {currency(Extension.BTC)}
             </Paragraph>
             <Spacer top="20px" />
             <Line />
@@ -65,12 +65,12 @@ const Order: React.FC<IProps> = ({ data }) => {
             <Paragraph>Du har solgt crypto for</Paragraph>
             <Spacer top="30px" />
             <Paragraph>
-              Limitpris: {numeral(data?.limitPrice).format("0,0.00")}{" "}
+              Limit-pris: {numeral(data?.limitPrice).format("0,0.00")}{" "}
               {currency(Extension.NOK)}
             </Paragraph>
             <Spacer bottom="5px" />
             <Paragraph>
-              Volume: {data?.cryptoVolume} {currency(Extension.BTC)}
+              Volum: {data?.cryptoVolume} {currency(Extension.BTC)}
             </Paragraph>
             <Spacer top="20px" />
             <Line />

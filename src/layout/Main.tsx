@@ -32,7 +32,7 @@ const Main: React.FC = () => {
       <InputField
         data={{
           className: "limitPrice",
-          title: `Limit pris (${currency(Extension.NOK)})`,
+          title: `Limit-pris (${currency(Extension.NOK)})`,
           onChange: handleUserChange("limitField"),
           onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
             const input = e.target.value;
@@ -64,7 +64,7 @@ const Main: React.FC = () => {
       <InputField
         data={{
           className: "volume",
-          title: `Volume (${currency(Extension.BTC)})`,
+          title: `Volum (${currency(Extension.BTC)})`,
           onChange: handleUserChange("volumeField"),
           onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
             const input = e.target.value;
