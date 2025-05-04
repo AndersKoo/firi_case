@@ -30,8 +30,7 @@ const Order: React.FC<IProps> = ({ data }) => {
         disabled={false}
         onClick={() => {
           openModal();
-        }}
-      >
+        }}>
         <span>{data?.titleMain}</span>
       </button>
 
@@ -44,7 +43,8 @@ const Order: React.FC<IProps> = ({ data }) => {
 
             <Spacer top="30px" />
             <Paragraph>
-              Limitpris: {data?.limitPrice} {currency(Extension.NOK)}
+              Limitpris: {numeral(data?.limitPrice).format("0,0.00")}{" "}
+              {currency(Extension.NOK)}
             </Paragraph>
             <Spacer bottom="5px" />
             <Paragraph>
@@ -65,7 +65,8 @@ const Order: React.FC<IProps> = ({ data }) => {
             <Paragraph>Du har solgt crypto for</Paragraph>
             <Spacer top="30px" />
             <Paragraph>
-              Limitpris: {data?.limitPrice} {currency(Extension.NOK)}
+              Limitpris: {numeral(data?.limitPrice).format("0,0.00")}{" "}
+              {currency(Extension.NOK)}
             </Paragraph>
             <Spacer bottom="5px" />
             <Paragraph>
@@ -91,8 +92,7 @@ const Order: React.FC<IProps> = ({ data }) => {
             closeModal();
             resetBuyClick();
             resetSellClick();
-          }}
-        >
+          }}>
           <span>{data?.titleSecondary}</span>
         </button>
       </Modal>
