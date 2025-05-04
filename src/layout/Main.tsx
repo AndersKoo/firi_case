@@ -17,6 +17,12 @@ const Main: React.FC = () => {
   const [cryptoVolume, setCryptoVolume] = useState("");
   const [limitPrice, setLimitPrice] = useState("");
 
+  // Disabler ordreknapp som default
+  const [limitPriceOrderButtonValidation, setlimitPriceOrderButtonValidation] =
+    useState(true);
+  const [volumeOrderButtonValidation, setvolumeOrderButtonValidation] =
+    useState(true);
+
   const total = Number(cryptoVolume) * Number(limitPrice);
 
   const handleUserChange =
@@ -41,15 +47,19 @@ const Main: React.FC = () => {
               switch (validation) {
                 case Validation.APPROVED:
                   setErrorLimitMessage("");
+                  setlimitPriceOrderButtonValidation(false);
                   break;
                 case Validation.EMPTY:
                   setErrorLimitMessage("Ingen verdi er angitt");
+                  setlimitPriceOrderButtonValidation(true);
                   break;
                 case Validation.PARTIALLYFILLED:
                   setErrorLimitMessage("Delvis utfylt");
+                  setlimitPriceOrderButtonValidation(true);
                   break;
                 case Validation.INVALID:
                   setErrorLimitMessage("Ugyldig verdi");
+                  setlimitPriceOrderButtonValidation(true);
                   break;
                 default:
                   setErrorLimitMessage("Ukjent feil");
@@ -73,15 +83,19 @@ const Main: React.FC = () => {
               switch (validation) {
                 case Validation.APPROVED:
                   setErrorVolumeMessage("");
+                  setvolumeOrderButtonValidation(false);
                   break;
                 case Validation.EMPTY:
                   setErrorVolumeMessage("Ingen verdi er angitt");
+                  setvolumeOrderButtonValidation(true);
                   break;
                 case Validation.PARTIALLYFILLED:
                   setErrorVolumeMessage("Delvis utfylt");
+                  setvolumeOrderButtonValidation(true);
                   break;
                 case Validation.INVALID:
                   setErrorVolumeMessage("Ugyldig verdi");
+                  setvolumeOrderButtonValidation(true);
                   break;
                 default:
                   setErrorVolumeMessage("Ukjent feil");
@@ -104,6 +118,10 @@ const Main: React.FC = () => {
           limitPrice: limitPrice,
           cryptoVolume: cryptoVolume,
           titleSecondary: "Tilbake til oversikt",
+        }}
+        button={{
+          limitPriceOrderButtonValidation: limitPriceOrderButtonValidation,
+          volumeOrderButtonValidation: volumeOrderButtonValidation,
         }}
       />
     </Style>

@@ -9,13 +9,14 @@ import UseModalHook from "../utils/hooks/UseModal";
 import UseButtonsHook from "../utils/hooks/UseButtons";
 
 import { currency, Extension } from "../utils/currency";
-import { OrderObject } from "../utils/type";
+import { ButtonOrderObject, OrderObject } from "../utils/type";
 
 interface IProps {
   data: OrderObject;
+  button: ButtonOrderObject;
 }
 
-const Order: React.FC<IProps> = ({ data }) => {
+const Order: React.FC<IProps> = ({ data, button }) => {
   const total = Number(data?.cryptoVolume) * Number(data?.limitPrice);
 
   const { openModal, closeModal } = UseModalHook();
@@ -23,11 +24,16 @@ const Order: React.FC<IProps> = ({ data }) => {
   const { sellClicked, buyClicked, resetBuyClick, resetSellClick } =
     UseButtonsHook();
 
+  // Hvis bare en av variablene er true / ugyldig verdi, så deaktiveres ordreknappen
+  const orderButtonValidation =
+    button.limitPriceOrderButtonValidation ||
+    button.volumeOrderButtonValidation;
+
   return (
     <Style>
       <button
         className="orderBtn"
-        disabled={false}
+        disabled={orderButtonValidation}
         onClick={() => {
           openModal();
         }}>

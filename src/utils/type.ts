@@ -22,6 +22,11 @@ export type OrderObject = {
   titleSecondary: string;
 };
 
+export type ButtonOrderObject = {
+  limitPriceOrderButtonValidation: boolean;
+  volumeOrderButtonValidation: boolean;
+};
+
 export type InputObject = {
   title?: string;
   name?: string;
