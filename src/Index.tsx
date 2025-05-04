@@ -3,8 +3,8 @@ import Top from "./layout/Top";
 import Main from "./layout/Main";
 import styled from "styled-components";
 
-import { ModalProvider } from "./utils/context/ModalContext";
-import { ButtonsProvider } from "./utils/context/ButtonsContext";
+import { ModalProvider } from "./utils/contexts/ModalContext";
+import { ButtonsProvider } from "./utils/contexts/ButtonsContext";
 import { GlobalStyle } from "./styles/global";
 
 const App: React.FC = () => {

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { ButtonsContext } from "../context/ButtonsContext";
+import { ButtonsContext } from "../contexts/ButtonsContext";
 
 const UseButtonsHook = () => {
   return React.useContext(ButtonsContext);

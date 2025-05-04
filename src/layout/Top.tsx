@@ -1,9 +1,9 @@
 import numeral from "numeral";
 import Spacer from "../ui/Spacer";
-import ButtonsGroup from "../ui/button/ButtonsGroup";
+import ButtonsGroup from "../ui/buttons/ButtonsGroup";
 import styled from "styled-components";
-import ButtonBuy from "../ui/button/ButtonBuy";
-import ButtonSell from "../ui/button/ButtonSell";
+import ButtonBuy from "../ui/buttons/ButtonBuy";
+import ButtonSell from "../ui/buttons/ButtonSell";
 import Paragraph from "../ui/Paragraph";
 import UseCryptoHook from "../utils/hooks/UseCrypto";
 
@@ -32,7 +32,7 @@ const Top: React.FC = () => {
       </Paragraph>
       <Spacer top="15px" />
       <Paragraph>
-        Volume ({currency(Extension.BTC)}): {cryptoVolume}
+        Volum ({currency(Extension.BTC)}): {cryptoVolume}
       </Paragraph>
       <Spacer bottom="15px" />
     </Style>

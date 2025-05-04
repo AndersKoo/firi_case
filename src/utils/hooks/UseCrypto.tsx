@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { CryptoContext } from "../context/CryptoContext";
+import { CryptoContext } from "../contexts/CryptoContext";
 
 const UseCryptoHook = () => {
   return React.useContext(CryptoContext);
