@@ -10,7 +10,7 @@ import UseCryptoHook from "../utils/hooks/UseCrypto";
 import { currency, Extension } from "../utils/currency";
 
 const Top: React.FC = () => {
-  const { currentmarkedPrice, limitPrice, cryptoVolume } = UseCryptoHook();
+  const { currentmarkedPrice } = UseCryptoHook();
 
   return (
     <Style>
@@ -25,16 +25,6 @@ const Top: React.FC = () => {
         <ButtonBuy className="buy" title="Kjøp" />
         <ButtonSell className="sell" title="Selg" />
       </ButtonsGroup>
-      <Spacer bottom="15px" />
-      <Paragraph>
-        Limit-pris ({currency(Extension.NOK)}):{" "}
-        {numeral(limitPrice).format("0,0.00")}
-      </Paragraph>
-      <Spacer top="15px" />
-      <Paragraph>
-        Volum ({currency(Extension.BTC)}): {cryptoVolume}
-      </Paragraph>
-      <Spacer bottom="15px" />
     </Style>
   );
 };
