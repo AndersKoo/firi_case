@@ -33,7 +33,7 @@ const ButtonSell: React.FC<IProps> = ({ title, className }) => {
 const Style = styled.div`
   button {
     width: 100px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     border-radius: var(--border-radius, 10px);
     background-color: var(--button-secondary-color, #474aee);
     border: none;
