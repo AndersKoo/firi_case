@@ -36,7 +36,8 @@ const Order: React.FC<IProps> = ({ data, button }) => {
         disabled={orderButtonValidation}
         onClick={() => {
           openModal();
-        }}>
+        }}
+      >
         <span>{data?.titleMain}</span>
       </button>
 
@@ -98,7 +99,8 @@ const Order: React.FC<IProps> = ({ data, button }) => {
             closeModal();
             resetBuyClick();
             resetSellClick();
-          }}>
+          }}
+        >
           <span>{data?.titleSecondary}</span>
         </button>
       </Modal>
